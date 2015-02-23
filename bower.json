@@ -1,0 +1,28 @@
+{
+  "name": "omnionline.us",
+  "version": "1.0.0",
+  "authors": [
+    "Matt Steele <matt@omnionline.us>"
+  ],
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "license": "MIT",
+  "homepage": "http://omnionline.us",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "js/lib/"
+  ],
+  "dependencies": {
+    "backbone": "~1.1.2",
+    "requirejs": "~2.1.16",
+    "jquery": "~2.1.3"
+  }
+}
