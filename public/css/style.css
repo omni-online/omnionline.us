@@ -1,32 +1,82 @@
 html, body {
     height: 100%;
     width: 100%;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
+    overflow-x: hidden;
+    font-family: 'Lato', sans-serif;
+    background-color: #240802;
 }
 
-#app {
+* {
+    padding: 0;
+    margin: 0;
     position: relative;
-    height: 100%;
-    width: 100%;
+    z-index: 100;
+}
+
+.app {
 }
 
 .parallax {
-    position: absolute;
+}
+
+.parallax-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 120%;
     left: -10%;
 }
 
-#sand {
-    bottom: -10%;
-    background: url('/img/sand.png') no-repeat;
-    background-size: cover;
-    height: 379px;
+.space {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background-image: url('/img/space.jpg');
+    background-position: center bottom;
 }
-#space {
-    top: -10%;
-    background: url('/img/space.jpg') no-repeat;
-    background-size: cover;
-    height: 1320px;
+
+.sand {
+    position: absolute;
+    bottom: -10%;
+    min-width: 1200px;
+    min-height: 300px;
+}
+
+.intro {
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+}
+
+.logo {
+    position: absolute;
+    left: 0;
+}
+
+.scroll {
+    margin-top: 65px;
+}
+
+.intro-text {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin-left: -50%;
+    padding: 0 20%;
+}
+
+.intro-heading {
+    color: white;
+    font-weight: 100;
+    font-size: 58px;
+    margin-bottom: 50px;
+}
+
+.btn {
+    background-color: #583363;
+    color: white;
+    text-decoration: none;
+    padding: 18px 32px;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 100;
 }

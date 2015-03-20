@@ -3,13 +3,27 @@
     <head>
         <meta charset="utf-8">
         <title>OmniOnline</title>
+        <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="/css/style.css">
         <script src="/js/lib/jquery/dist/jquery.min.js"></script>
     </head>
     <body>
-        <div id="app">
-            <div id="sand" class="parallax" data-near="20"></div>
-            <div id="space" class="parallax" data-near="5"></div>
+        <div class="app">
+            <div id="contact-form" class="contact-form">
+                <form style="padding: 200px;">
+                    Big form
+                </form>
+            </div>
+            <div id="intro" class="intro">
+                <a class="logo" href="#intro"><img src="img/logo.png"></a>
+                <a href="#contact-form"><img class="scroll" src="img/scroll.png"></a>
+                <div class="intro-text">
+                    <h1 class="intro-heading">websites and apps for the people of earth</h1>
+                    <a href="#contact-form" class="btn">Can we help you?</a>
+                </div>
+                <img class="sand parallax parallax-bg" data-near="20" src="img/sand.png">
+            </div>
+            <div class="space parallax parallax-bg" data-near="5"></div>
         </div>
         <script src="/js/scripts.js"></script>
     </body>
