@@ -1,0 +1,14 @@
+{
+    "jslint.options": {
+        "browser": true,
+        "devel": true,
+        "nomen": true,
+        "node": true,
+        "es5": true,
+        "vars": true,
+        "predef": {
+            "$": true,
+            "jQuery": true
+        }
+    }
+}
