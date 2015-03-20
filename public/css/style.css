@@ -1,7 +1,6 @@
 html, body {
     height: 100%;
     width: 100%;
-    overflow-x: hidden;
     font-family: 'Lato', sans-serif;
     background-color: #240802;
 }
@@ -13,7 +12,13 @@ html, body {
     z-index: 100;
 }
 
+section {
+    min-height: 100vh;
+}
+
 .app {
+    max-width: 100vw;
+    overflow: hidden;
 }
 
 .parallax {
@@ -54,6 +59,10 @@ html, body {
 
 .scroll {
     margin-top: 65px;
+}
+
+.contact-form {
+    display: none;
 }
 
 .intro-text {
