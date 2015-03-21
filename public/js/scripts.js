@@ -60,6 +60,22 @@
         return;
     });
     
+    // add listener to email
+    var contacts = doc.querySelectorAll('form.contact-us');
+    for (i = 0; i < contacts.length; i += 1) {
+        contacts[i].addEventListener('submit', function (e) {
+            e.preventDefault();
+            var $el = $(e.target),
+                data = {
+                    email: $el.find('.email').val(),
+                    message: $el.find('.message').val()
+                };
+            $.post("/email", data, function (res) {
+                console.log(res);
+            });
+        });
+    }
+    
     // show that form and keep scroll location.
     doc.querySelector('.contact-form').setAttribute('style', 'display: block');
     $('html, body').scrollTop($('.intro').first().offset().top);
