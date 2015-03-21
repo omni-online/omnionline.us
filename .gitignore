@@ -48,4 +48,4 @@ node_modules
 # Project specific
 /css
 /js/lib
-/.config.js
+/config.js
