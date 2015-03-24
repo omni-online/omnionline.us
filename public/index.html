@@ -9,17 +9,50 @@
     </head>
     <body>
         <div class="app">
-            <section id="contact-form" class="contact-form">
-                <form class="contact-us" style="padding: 200px;">
-                    <input type="email" class="email" placeholder="Email..." />
-                    <textarea class="message" placeholder="Message..."></textarea>
-                    <button>Submit!</button>
-                </form>
+            <section class="contact">
+                <div class="contact-content">
+                    <form class="contact-form">
+                        <h2 class="contact-heading">How might we help you?</h2>
+                        <div class="col-1-3">
+                            <label class="contact-label" for="name">What's your name?</label>
+                            <input class="contact-input" id="name" placeholder="Name" />
+                            <label class="contact-label" for="project-type">What kind of project is this?</label>
+                            <select class="contact-select" id="project-type">
+                                <option value="Website redesign">Website redesign</option>
+                                <option value="New website">New website</option>
+                                <option value="App design/development">App design/development</option>
+                            </select>
+                            <label class="contact-label" for="budget">What budget are you working with?</label>
+                            <select class="contact-select" id="budget">
+                                <option value="<5k">Under $5,000</option>
+                                <option value="5k-15k">$5,000 - $15,000</option>
+                                <option value="15k-50k">$15,000 - $50,000</option>
+                            </select>
+                        </div>
+                        <div class="col-1-3">
+                            <label class="contact-label" for="email">What's your email?</label>
+                            <input class="contact-input" id="email" type="email" placeholder="Email" />
+                            <label class="contact-label" for="site">Do you currently have a site?</label>
+                            <input class="contact-input" id="site" placeholder="Url" />
+                            <label class="contact-label" for="timeframe">How quickly does this need to happen?</label>
+                            <select class="contact-select" id="timeframe">
+                                <option value="<5k">Preferably yesterday</option>
+                                <option value="15k-50k">Soonish</option>
+                                <option value="15k-50k">Whenever</option>
+                            </select>
+                        </div>
+                        <div class="col-1-3">
+                            <label class="contact-label" for="timeframe">What's the problem you're solving?</label>
+                            <textarea class="contact-textarea" placeholder="Message"></textarea>
+                        </div>
+                        <button class="btn contact-btn">Send Transmission</button>
+                    </form>
+                </div>
             </section>
-            <section id="intro" class="intro">
-                <a class="logo" href="#intro"><img src="img/logo.png"></a>
+            <section class="intro">
+                <a class="logo" href="/"><img src="img/logo.png"></a>
                 <a href="#" class="formLink"><img class="scroll" src="img/scroll.png"></a>
-                <div class="intro-text">
+                <div class="intro-content">
                     <h1 class="intro-heading">websites and apps for the people of earth</h1>
                     <a href="#" class="btn formLink">Can we help you?</a>
                 </div>
