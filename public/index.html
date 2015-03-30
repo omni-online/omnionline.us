@@ -10,40 +10,53 @@
     <body>
         <div class="app">
             <section class="contact">
+                <button class="btn back-to-earth">Back to earth</button>
                 <div class="contact-content">
                     <form class="contact-form">
                         <h2 class="contact-heading">How might we help you?</h2>
-                        <div class="col-1-3">
-                            <label class="contact-label" for="name">What's your name?</label>
-                            <input class="contact-input" id="name" placeholder="Name" />
-                            <label class="contact-label" for="project-type">What kind of project is this?</label>
-                            <select class="contact-select" id="project-type">
-                                <option value="Website redesign">Website redesign</option>
-                                <option value="New website">New website</option>
-                                <option value="App design/development">App design/development</option>
-                            </select>
-                            <label class="contact-label" for="budget">What budget are you working with?</label>
-                            <select class="contact-select" id="budget">
-                                <option value="<5k">Under $5,000</option>
-                                <option value="5k-15k">$5,000 - $15,000</option>
-                                <option value="15k-50k">$15,000 - $50,000</option>
-                            </select>
+                        <div class="one-third lap--one-half palm--one-whole">
+                            <div class="field">
+                                <input class="contact-input" id="name" placeholder="Name" />
+                                <label class="contact-label" for="name">Name</label>
+                            </div>
+                            <div class="field">
+                                <select class="contact-select" id="project-type">
+                                    <option value="Website redesign">Website redesign</option>
+                                    <option value="New website">New website</option>
+                                    <option value="App design/development">App design/development</option>
+                                </select>
+                                <label class="contact-label" for="project-type">Project</label>
+                            </div>
+                            <div class="field">
+                                <select class="contact-select" id="budget">
+                                    <option value="<5k">Under $5,000</option>
+                                    <option value="5k-15k">$5,000 - $15,000</option>
+                                    <option value="15k-50k">$15,000 - $50,000</option>
+                                </select>
+                                <label class="contact-label" for="budget">Budget</label>
+                            </div>
                         </div>
-                        <div class="col-1-3">
-                            <label class="contact-label" for="email">What's your email?</label>
-                            <input class="contact-input" id="email" type="email" placeholder="Email" />
-                            <label class="contact-label" for="site">Do you currently have a site?</label>
-                            <input class="contact-input" id="site" placeholder="Url" />
-                            <label class="contact-label" for="timeframe">How quickly does this need to happen?</label>
-                            <select class="contact-select" id="timeframe">
-                                <option value="<5k">Preferably yesterday</option>
-                                <option value="15k-50k">Soonish</option>
-                                <option value="15k-50k">Whenever</option>
-                            </select>
+                        <div class="one-third lap--one-half palm--one-whole">
+                            <div class="field">
+                                <input class="contact-input" id="email" type="email" placeholder="Email" />
+                                <label class="contact-label" for="email">Email</label>
+                            </div>
+                            <div class="field">
+                                <input class="contact-input" id="site" placeholder="Url" />
+                                <label class="contact-label" for="site">Site</label>
+                            </div>
+                            <div class="field">
+                                <select class="contact-select" id="timeframe">
+                                    <option value="<5k">Preferably yesterday</option>
+                                    <option value="15k-50k">Soonish</option>
+                                    <option value="15k-50k">Whenever</option>
+                                </select>
+                                <label class="contact-label" for="timeframe">Timeframe</label>
+                            </div>
                         </div>
-                        <div class="col-1-3">
-                            <label class="contact-label" for="timeframe">What's the problem you're solving?</label>
+                        <div class="one-third lap--one-whole palm--one-whole">
                             <textarea class="contact-textarea" placeholder="Message"></textarea>
+                            <label class="contact-label" for="timeframe">Message</label>
                         </div>
                         <button class="btn contact-btn">Send Transmission</button>
                     </form>
