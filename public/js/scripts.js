@@ -7,6 +7,14 @@
     var utils = {
         showContactForm: function () {
             $('html, body').animate({ scrollTop: 0 });
+        },
+        emailContactForm: function (data) {
+            $.post("/email", data, function (res) {
+                alert('Message successfully sent!');
+            }).fail(function (err) {
+                alert('Uh oh! An error occurred. Please try again later.');
+                console.error(err);
+            });
         }
     };
     
@@ -54,7 +62,6 @@
             }
             e.preventDefault();
             utils.showContactForm();
-            return;
         } while (el = el.parentNode);
         
         return;
@@ -65,14 +72,14 @@
     for (i = 0; i < contacts.length; i += 1) {
         contacts[i].addEventListener('submit', function (e) {
             e.preventDefault();
-            var $el = $(e.target),
-                data = {
-                    email: $el.find('.email').val(),
-                    message: $el.find('.message').val()
-                };
-            $.post("/email", data, function (res) {
-                console.log(res);
-            });
+            var data = {}, i;
+            for (i = 0; i < e.target.length; i += 1) {
+                if (e.target[i].id && e.target[i].value) {
+                    data[e.target[i].id] = e.target[i].value;
+                }
+            }
+            
+            utils.emailContactForm(data);
         });
     }
     
