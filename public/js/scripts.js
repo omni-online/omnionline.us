@@ -9,12 +9,19 @@
             $('html, body').animate({ scrollTop: 0 });
         },
         emailContactForm: function (data) {
-            $.post("/email", data, function (res) {
-                alert('Message successfully sent!');
-            }).fail(function (err) {
-                alert('Uh oh! An error occurred. Please try again later.');
-                console.error(err);
-            });
+            $.ajax({
+                type: "POST",
+                url: "/email",
+                dataType:"json",
+                data: data,
+                success: function (res) {
+                    alert('Message successfully sent!');
+                },
+                error: function (err) {
+                    alert('Uh oh! An error occurred. Please try again later.');
+                    console.error(err);
+                }
+            })
         }
     };
     
