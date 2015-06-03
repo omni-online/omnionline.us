@@ -7,8 +7,22 @@
         <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="/css/style.css">
         <script src="/js/lib/jquery/dist/jquery.min.js"></script>
+        
+        <!-- twitter -->
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
     </head>
     <body>
+        
+        <!-- facebook -->
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3&appId=264799523678546";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+        
         <div class="app">
             <section class="contact">
                 <button class="btn back-to-earth">Back to earth</button>
@@ -68,7 +82,20 @@
                 <a href="#" class="formLink"><img class="scroll" src="img/scroll.png"></a>
                 <div class="intro-content">
                     <h1 class="intro-heading">websites and apps for the people of earth</h1>
-                    <a href="#" class="btn formLink">Can we help you?</a>
+                    <div class="social clearfix">
+                        <div class="fb-like" data-href="https://www.facebook.com/pages/Omni-Online/273592532750702" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+                        
+                        <span class="cushion"></span>
+                        
+                        <a href="https://twitter.com/share" class="twitter-share-button" data-via="Matt_R_Steele">Tweet</a>
+                        
+                        <span class="cushion"></span>
+                        
+                        <a href="https://twitter.com/omni_online" class="twitter-follow-button" data-show-count="false">Follow @omni_online</a>
+                    </div>
+                    <p>
+                        <a href="#" class="btn formLink">Can we help you?</a>
+                    </p>
                 </div>
                 <img class="sand parallax parallax-bg" data-near="20" src="img/sand.png">
             </section>

@@ -216,6 +216,11 @@ section {
     margin-top: 65px;
 }
 
+.social {
+    margin: 10px 0;
+    clear: both;
+}
+
 .contact-form {
     display: none;
 }
@@ -245,10 +250,21 @@ section {
     font-family: 'Lato', sans-serif;
     font-size: 18px;
     font-weight: 100;
+    display: inline-block;
 }
 .btn:hover {
     cursor: pointer;
 }
 .btn:hover, .btn:focus {
     /*border-color: #EF8934;*/
+}
+
+.cushion {
+    width: 2em;
+    display: inline-block;
+}
+
+.fb_iframe_widget {
+    position: relative;
+    top: -4px;
 }
