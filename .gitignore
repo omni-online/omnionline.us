@@ -46,6 +46,7 @@ Temporary Items
 node_modules
 
 # Project specific
-/css
-/js/lib
+/public/js/lib
 /config.js
+*.min.js
+*.min.css
