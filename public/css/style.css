@@ -112,7 +112,7 @@ section {
 }
 .contact-content {
     position: absolute;
-    top: 50%;
+    top: 100px;
     transform: translateY(-50%);
     right: 0;
     left: 0;
@@ -227,7 +227,7 @@ section {
 
 .intro-content {
     position: absolute;
-    top: 40%;
+    top: 250px;
     left: 50%;
     margin-left: -50%;
     padding: 0 20%;
@@ -267,4 +267,10 @@ section {
 .fb_iframe_widget {
     position: relative;
     top: -4px;
+}
+
+@media (max-width: 768px) {  
+    .no-mobile {
+        display: none;
+    }
 }
