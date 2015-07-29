@@ -4,5 +4,6 @@ module.exports = {
         smtp: 'emailer-goes-here',
         headers: {'header-key': 'header-value'},
         emails: ['email1@test.com', 'email2@test.com']
-    }
+    },
+    apisecuritystring: 'keystring-goes-here'
 };
