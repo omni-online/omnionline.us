@@ -5,5 +5,6 @@ module.exports = {
         headers: {'header-key': 'header-value'},
         emails: ['email1@test.com', 'email2@test.com']
     },
-    apisecuritystring: 'keystring-goes-here'
+    apisecuritystring: 'keystring-goes-here',
+    segmentwritekey: 'write-key-here'
 };
