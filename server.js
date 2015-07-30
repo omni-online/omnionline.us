@@ -24,7 +24,9 @@ function track(req, isBad) {
             'User-Agent': req.header('User-Agent'),
             'HTTP-Method': req.method,
             'Accept-Language': req.header('Accept-Language'),
-            'IP': req.ip
+            'IP': req.headers['x-forwarded-for'] || req.connection.remoteAddress,
+            'Hostname': req.hostname,
+            'XHR': req.xhr
         }
     });
 }
