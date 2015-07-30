@@ -13,28 +13,31 @@ var config = require('./config'),
     mg = new Mailgun(config.mailgun.api);
 
 
-// Filter
-function filterNonApps(req, res, next) {
-    if (req && req.header('User-Agent') && req.header('User-Agent').indexOf(config.apisecuritystring) === 0) {
-        next();
-    } else {
-        res.status(404).send("Cannot " + req.method + " " + req.originalUrl);
-    }
-}
-
 // Analytics
-function tracker(req, res, next) {
+function track(req, isBad) {
+    var segmentEvent = (isBad) ? 'Bad Server Request' : 'Hit Server';
+    
     analytics.track({
-        event: 'Hit Server',
+        event: segmentEvent,
         userId: 'anonymous_user',
         properties: {
             'User-Agent': req.header('User-Agent'),
             'HTTP-Method': req.method,
-            'Accept-Language': req.header('Accept-Language')
+            'Accept-Language': req.header('Accept-Language'),
+            'IP': req.ip
         }
     });
-    console.log('app hit');
-    next();
+}
+
+// Filter
+function filterNonApps(req, res, next) {
+    if (req && req.header('User-Agent') && req.header('User-Agent').indexOf(config.apisecuritystring) === 0) {
+        track(req);
+        next();
+    } else {
+        track(req, true);
+        res.status(404).send("Cannot " + req.method + " " + req.originalUrl);
+    }
 }
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -65,7 +68,7 @@ app.post('/email', function (req, res, next) {
     }
 });
 
-app.use('/api/utils/time', filterNonApps, tracker, function (req, res, next) {
+app.use('/api/utils/time', filterNonApps, function (req, res, next) {
     return res.status(200).json({seconds: Math.round(Date.now() / 1000)});
 });
 
