@@ -112,7 +112,7 @@ section {
 }
 .contact-content {
     position: absolute;
-    top: 100px;
+    top: 50%;
     transform: translateY(-50%);
     right: 0;
     left: 0;
@@ -121,7 +121,7 @@ section {
 @media (max-width: 480px) {
     .contact-content {
         position: relative;
-        top: 0;
+        top: 100px;
         transform: translateY(0);
     }
 }
@@ -227,10 +227,20 @@ section {
 
 .intro-content {
     position: absolute;
-    top: 250px;
+    top: 40%;
     left: 50%;
     margin-left: -50%;
     padding: 0 20%;
+}
+@media (max-width: 480px) {
+    .intro-content {
+        position: relative;
+        top: auto;
+        left: auto;
+        margin-left: 0;
+        padding-top: 220px;
+        padding-bottom: 220px;
+    }
 }
 
 .intro-heading {
