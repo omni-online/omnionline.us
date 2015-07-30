@@ -121,7 +121,7 @@ section {
 @media (max-width: 480px) {
     .contact-content {
         position: relative;
-        top: 100px;
+        top: 0;
         transform: translateY(0);
     }
 }
