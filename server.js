@@ -33,7 +33,14 @@ function track(req, isBad) {
 
 // test
 function testBuild(agent) {
-    return (agent.substr(config.apisecuritystring.length + 1, config.buildnumber.length) === config.buildnumber);
+    var start = config.apisecuritystring.length + 1,
+        end = agent.indexOf(" ");
+
+    if (end <= start) {
+        return false;
+    }
+
+    return agent.slice(start, end) === config.buildnumber;
 }
 
 // Filter
