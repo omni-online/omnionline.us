@@ -6,5 +6,6 @@ module.exports = {
         emails: ['email1@test.com', 'email2@test.com']
     },
     apisecuritystring: 'keystring-goes-here',
-    segmentwritekey: 'write-key-here'
+    segmentwritekey: 'write-key-here',
+    buildnumber: '12345'
 };

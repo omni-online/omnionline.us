@@ -31,11 +31,21 @@ function track(req, isBad) {
     });
 }
 
+// test
+function testBuild(agent) {
+    return (agent.substr(config.apisecuritystring.length + 1, config.buildnumber.length) === config.buildnumber);
+}
+
 // Filter
 function filterNonApps(req, res, next) {
     if (req && req.header('User-Agent') && req.header('User-Agent').indexOf(config.apisecuritystring) === 0) {
-        track(req);
-        next();
+        if (testBuild(req.header('User-Agent'))) {
+            track(req);
+            next();
+        } else {
+            track(req, true);
+            res.status(403).json({message: "Update"});
+        }
     } else {
         track(req, true);
         res.status(404).send("Cannot " + req.method + " " + req.originalUrl);
