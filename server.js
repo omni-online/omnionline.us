@@ -44,7 +44,7 @@ function filterNonApps(req, res, next) {
             next();
         } else {
             track(req, true);
-            res.status(403).json({message: "Update"});
+            res.status(200).json({err: "Update"});
         }
     } else {
         track(req, true);
