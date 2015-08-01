@@ -7,5 +7,5 @@ module.exports = {
     },
     apisecuritystring: 'keystring-goes-here',
     segmentwritekey: 'write-key-here',
-    buildnumber: '12345'
+    buildnumbers: ['12345']
 };

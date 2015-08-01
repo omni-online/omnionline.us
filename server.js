@@ -32,7 +32,7 @@ function track(req, isBad) {
 }
 
 // test
-function testBuild(agent) {
+function testBuild(agent, build) {
     var start = config.apisecuritystring.length + 1,
         end = agent.indexOf(" ");
 
@@ -40,13 +40,24 @@ function testBuild(agent) {
         return false;
     }
 
-    return agent.slice(start, end) === config.buildnumber;
+    return agent.slice(start, end) === build;
+}
+
+function testAgent(agent) {
+    var i;
+    for (i = 0; i < config.buildnumbers.length; i += 1) {
+        if (testBuild(agent, config.buildnumbers[i])) {
+            return true;
+        }
+    }
+    
+    return false;
 }
 
 // Filter
 function filterNonApps(req, res, next) {
     if (req && req.header('User-Agent') && req.header('User-Agent').indexOf(config.apisecuritystring) === 0) {
-        if (testBuild(req.header('User-Agent'))) {
+        if (testAgent(req.header('User-Agent'))) {
             track(req);
             next();
         } else {
