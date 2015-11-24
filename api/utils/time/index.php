@@ -8,7 +8,7 @@ function testBuild($agent, $build) {
     
     global $config;
     
-    $start = strlen($config->apisecuritystring);
+    $start = strlen($config->apisecuritystring) + 1;
 
     return substr($agent, $start, strlen($build)) === $build;
 }
@@ -31,7 +31,7 @@ function filterNonApps() {
     global $config;
     
     $headers = apache_request_headers();
-    $userAgent = $headers['User-Agent'];
+    $userAgent = $headers["User-Agent"];
     
     if ($userAgent && strrpos($userAgent, $config->apisecuritystring) === 0) {
         if (testAgent($userAgent)) {
